@@ -1,0 +1,15 @@
+{% include "includes/header.html" %}
+    {% if errors %}
+{#        <p style="color: red;">Please submit a search term</p>#}
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="" method="get">
+        <input type="text" name="query" />
+        <input type="submit" value="search" />
+    </form>
+
+{% include "includes/footer.html" %}
