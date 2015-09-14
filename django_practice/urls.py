@@ -16,17 +16,18 @@ Including another URLconf
 
 from django.conf.urls import include, url
 from django.contrib import admin
-from start_up_app.views import *
 
-
+from start_up_app.book import views
+from start_up_app.contact.views import *
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^hello/$', hello),
-    url(r'^time/$', current_datetime),
-    url(r'^time/plus/(\d{1,2})/$', hours_ahead),
-    url(r'^display_meta/$', display_meta),
-
-    # url(r'^search_form/$', search_form),
-    url(r'^search/$', search),
+    #url(r'^admin/', include(admin.site.urls)),
+    url(r'^hello/$', views.hello),
+    url(r'^time/$', views.current_datetime),
+    url(r'^time/plus/(\d{1,2})/$', views.hours_ahead),
+    # url(r'^display_meta/$', display_meta),
+    #
+    # # url(r'^search_form/$', search_form),
+    # url(r'^search/$', search),
+    # url(r'^contact_form$', contact),
 ]
