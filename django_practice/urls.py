@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^hello/$', views.hello),
     url(r'^time/$', views.current_datetime),
     url(r'^time/plus/(\d{1,2})/$', views.hours_ahead),
+    url(r'^articles/(?P<year>\d{4})/(?P<month>\d{2})/$',)
     # url(r'^display_meta/$', display_meta),
     #
     # # url(r'^search_form/$', search_form),

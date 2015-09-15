@@ -47,3 +47,5 @@ def search(request):
         else:
             books = Book.objects.filter(title__icontains = query)
     return render_to_response("search.html", locals())
+
+
